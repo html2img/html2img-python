@@ -97,15 +97,25 @@ python -m pip install --upgrade build twine
 
 ### 3. Choose how you will upload
 
-**Trusted Publishing (recommended).** GitHub Actions authenticates to PyPI over
+**Trusted publishing (recommended).** GitHub Actions authenticates to PyPI over
 OIDC, so there is no long-lived token anywhere. `.github/workflows/publish.yml`
-in this repo is already written for it. Configure it once, after the first
-manual upload has created the project (see below).
+in this repo is already written for it, and it also produces
+[PEP 740 attestations](https://peps.python.org/pep-0740/), giving each release
+verifiable provenance.
 
-**API token (needed for the very first upload).** Trusted publishing can only be
-configured against an existing project *or* as a "pending publisher". The
-simplest path for a first release is: upload once with a token, then switch to
-trusted publishing for every release after that.
+This works even for a project that does not exist yet: add a
+[pending publisher](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/)
+at [pypi.org/manage/account/publishing](https://pypi.org/manage/account/publishing/)
+(project name, owner, repository, `publish.yml`, environment `pypi`), and the
+first successful run creates the project and converts the pending publisher into
+a normal one. Note that a pending publisher does not reserve the name — it is
+claimed on first upload.
+
+**API token.** Only needed if you upload by hand with `twine`, which the rest of
+this guide covers because it is worth understanding once. If you use the pending
+publisher route, skip straight to
+[every release after the first](#every-release-after-the-first) — it is the same
+process.
 
 ## Your first release
 
