@@ -6,6 +6,15 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and the
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-08-16
+
+### Fixed
+
+- Declare the licence as an SPDX expression (`license = "MIT"` plus
+  `license-files`) instead of a file reference, so PyPI shows "MIT" in the
+  project sidebar rather than the full licence text. Packaging metadata only;
+  the code is identical to 1.0.0.
+
 ## [1.0.0] - 2026-08-16
 
 Initial release of the official Python client for the
@@ -30,5 +39,6 @@ Initial release of the official Python client for the
   `template` commands.
 - Inline type hints and a `py.typed` marker.
 
-[Unreleased]: https://github.com/html2img/html2img-python/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/html2img/html2img-python/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/html2img/html2img-python/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/html2img/html2img-python/releases/tag/v1.0.0
