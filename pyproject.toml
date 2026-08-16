@@ -1,0 +1,102 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "html2img-client"
+dynamic = ["version"]
+description = "Official Python client for the html2img HTML to Image API: render HTML to PNG, screenshot live URLs, render templates and export PDFs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "html2img", email = "info@html2img.com" }]
+maintainers = [{ name = "html2img", email = "info@html2img.com" }]
+keywords = [
+    "html2img",
+    "html-to-image",
+    "html-to-png",
+    "html-to-pdf",
+    "screenshot",
+    "screenshot-api",
+    "url-to-image",
+    "og-image",
+    "open-graph",
+    "image-generation",
+    "pdf",
+    "api-client",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-asyncio>=0.23",
+    "mypy>=1.8",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+html2img = "html2img.cli:_entrypoint"
+
+[project.urls]
+Homepage = "https://html2img.com"
+Documentation = "https://html2img.com/docs/usage/python"
+Source = "https://github.com/html2img/html2img-python"
+Issues = "https://github.com/html2img/html2img-python/issues"
+Changelog = "https://github.com/html2img/html2img-python/blob/main/CHANGELOG.md"
+Pricing = "https://html2img.com/pricing"
+
+[tool.hatch.version]
+path = "src/html2img/_version.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+    "/examples",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/html2img"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["UP006", "UP007", "UP035", "UP045", "RUF012"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.mypy]
+files = ["src"]
+strict = true
+warn_unused_ignores = false
