@@ -9,7 +9,7 @@
 
 The official Python client for the [HTML to Image API](https://html2img.com) at html2img.com. Turn HTML and CSS into images, capture screenshots of live URLs, render named templates, and export A4 PDFs, all returning a typed response object.
 
-Every render runs in real Chrome, so flexbox, grid, custom properties, web fonts and inline JavaScript behave exactly as they do in the browser. The package has **zero runtime dependencies** — it is built on the standard library — ships with full type hints and a `py.typed` marker, and works anywhere Python does: Django and Flask apps, Celery workers, AWS Lambda, Jupyter notebooks and one-off scripts. The full API reference lives in the [documentation](https://html2img.com/docs), with a Python-specific guide at [html2img.com/docs/usage/python](https://html2img.com/docs/usage/python).
+Every render runs in real Chrome, so flexbox, grid, custom properties, web fonts and inline JavaScript behave exactly as they do in the browser. The package has **zero runtime dependencies** — it is built on the standard library — ships with full type hints and a `py.typed` marker, and works anywhere Python does: Django and Flask apps, Celery workers, AWS Lambda, Jupyter notebooks and one-off scripts. The full API reference lives in the [documentation](https://html2img.com/docs), with a Python-specific guide at [html2img.com/integrations/python](https://html2img.com/integrations/python/).
 
 Three things this package does, each with its own worked guide:
 
@@ -529,14 +529,14 @@ def og_image_url(document: str) -> str | None:
 
 The same API has worked guides and official packages for
 [Django](https://github.com/html2img/html2img-django),
-[PHP](https://html2img.com/docs/usage/php),
-[Laravel](https://html2img.com/docs/usage/laravel),
-[Ruby on Rails](https://html2img.com/docs/usage/rails),
-[JavaScript and Node.js](https://html2img.com/docs/usage/javascript),
-[React](https://html2img.com/docs/usage/react),
-[Vue](https://html2img.com/docs/usage/vue),
-[WordPress](https://html2img.com/docs/usage/wordpress) and
-[Statamic](https://html2img.com/docs/usage/statamic).
+[PHP](https://html2img.com/integrations/php/),
+[Laravel](https://html2img.com/integrations/laravel/),
+[Ruby and Rails](https://html2img.com/integrations/ruby/),
+[JavaScript and Node.js](https://html2img.com/integrations/javascript/),
+[React](https://html2img.com/integrations/javascript/#react-and-nextjs),
+[Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt),
+[WordPress](https://html2img.com/integrations/wordpress/) and
+[Statamic](https://html2img.com/integrations/statamic/).
 
 ## Development
 
@@ -554,7 +554,7 @@ Publishing to PyPI is covered in [PUBLISHING.md](PUBLISHING.md).
 
 ## Links
 
-[HTML to Image API](https://html2img.com) · [Screenshot API](https://html2img.com/screenshot-api/) · [HTML to PDF API](https://html2img.com/html-to-pdf/) · [Documentation](https://html2img.com/docs) · [Python guide](https://html2img.com/docs/usage/python) · [Templates](https://html2img.com/templates) · [Tools](https://html2img.com/tools) · [Features](https://html2img.com/features) · [Comparisons](https://html2img.com/compare) · [Articles](https://html2img.com/articles) · [Pricing](https://html2img.com/pricing) · [Django package](https://github.com/html2img/html2img-django)
+[HTML to Image API](https://html2img.com) · [Screenshot API](https://html2img.com/screenshot-api/) · [HTML to PDF API](https://html2img.com/html-to-pdf/) · [Documentation](https://html2img.com/docs) · [Python guide](https://html2img.com/integrations/python/) · [Templates](https://html2img.com/templates) · [Tools](https://html2img.com/tools) · [Features](https://html2img.com/features) · [Comparisons](https://html2img.com/compare) · [Articles](https://html2img.com/articles) · [Pricing](https://html2img.com/pricing) · [Django package](https://github.com/html2img/html2img-django)
 
 ## Licence
 

@@ -57,7 +57,7 @@ html2img = "html2img.cli:_entrypoint"
 
 [project.urls]
 Homepage = "https://html2img.com"
-Documentation = "https://html2img.com/docs/usage/python"
+Documentation = "https://html2img.com/integrations/python/"
 Source = "https://github.com/html2img/html2img-python"
 Issues = "https://github.com/html2img/html2img-python/issues"
 Changelog = "https://github.com/html2img/html2img-python/blob/main/CHANGELOG.md"
