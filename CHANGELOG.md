@@ -6,6 +6,15 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and the
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-09-23
+
+### Changed
+
+- README: the "Other languages and frameworks" section now lists every
+  official package (SDKs, framework integrations, CMS plugins, the GitHub
+  Action and the MCP server). Documentation only; the code is identical to
+  1.0.1.
+
 ## [1.0.1] - 2026-08-16
 
 ### Fixed
@@ -39,6 +48,7 @@ Initial release of the official Python client for the
   `template` commands.
 - Inline type hints and a `py.typed` marker.
 
-[Unreleased]: https://github.com/html2img/html2img-python/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/html2img/html2img-python/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/html2img/html2img-python/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/html2img/html2img-python/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/html2img/html2img-python/releases/tag/v1.0.0
