@@ -1,6 +1,6 @@
-[![html2img — HTML to image API, rendered in real Chrome](https://html2img.com/og-image.png)](https://html2img.com)
+[![HTML to Image (html2img): HTML to image API, rendered in real Chrome](https://html2img.com/og-image.png)](https://html2img.com)
 
-# html2img for Python
+# HTML to Image (html2img) for Python
 
 [![PyPI Version](https://img.shields.io/pypi/v/html2img-client)](https://pypi.org/project/html2img-client/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/html2img-client)](https://pypi.org/project/html2img-client/)
